@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { WhatsAppFloat } from "@/components/whatsapp-float";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -18,10 +19,10 @@ export const metadata: Metadata = {
     "Zurich City Transfer",
     "Private Driver Switzerland",
     "Airport Transfer Kloten",
-        "Interlaken transfer from Zurich Airport",
+    "Interlaken transfer from Zurich Airport",
     "Lucerne transfer from Zurich Airport",
     "Grindelwald private transfer",
-    "Lauterbrunnen transfer"
+    "Lauterbrunnen transfer",
   ],
   openGraph: {
     title: siteConfig.title,
@@ -43,13 +44,13 @@ const jsonLd = {
   url: siteConfig.url,
   telephone: siteConfig.phone,
   email: siteConfig.email,
-  areaServed: ["Zurich Airport", "Kloten", "Zurich", "Switzerland"],
+  areaServed: ["Zurich Airport", "Kloten", "Zurich City", "Switzerland"],
   serviceType: [
     "Airport transfer",
     "Chauffeur service",
     "Private transport",
     "City transfer",
-    "Long-distance transfer"
+    "Long-distance transfer",
   ],
   address: {
     "@type": "PostalAddress",
@@ -59,7 +60,11 @@ const jsonLd = {
   },
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body className="bg-white text-neutral-950 antialiased">
@@ -70,6 +75,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <WhatsAppFloat />
       </body>
     </html>
   );

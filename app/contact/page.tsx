@@ -35,6 +35,32 @@ export default function ContactPage() {
               nationwide
             </p>
           </div>
+
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a
+              href="https://wa.me/41797293699"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-neutral-950 px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90"
+            >
+              WhatsApp Us
+            </a>
+
+            <a
+              href="tel:+41797293699"
+              className="rounded-full border border-neutral-300 px-6 py-3 text-sm font-semibold text-neutral-900 transition hover:bg-neutral-100"
+            >
+              Call Now
+            </a>
+          </div>
+
+          <div className="mt-10 rounded-3xl bg-neutral-50 p-6">
+            <h2 className="text-xl font-semibold">Fast booking requests</h2>
+            <p className="mt-3 leading-8 text-neutral-700">
+              For faster handling, please include your pickup location,
+              destination, number of passengers, and preferred date and time.
+            </p>
+          </div>
         </div>
 
         <form
@@ -68,24 +94,26 @@ export default function ContactPage() {
               type="text"
               placeholder="Pickup location"
               className="rounded-2xl border border-neutral-300 px-4 py-3"
+              required
             />
             <input
               name="destination"
               type="text"
               placeholder="Destination"
               className="rounded-2xl border border-neutral-300 px-4 py-3"
+              required
             />
             <input
               name="datetime"
               type="text"
               placeholder="Date and time"
               className="rounded-2xl border border-neutral-300 px-4 py-3"
+              required
             />
             <textarea
               name="message"
               placeholder="Message"
               className="min-h-32 rounded-2xl border border-neutral-300 px-4 py-3"
-              required
             />
             <button
               type="submit"
@@ -93,6 +121,10 @@ export default function ContactPage() {
             >
               Send Request
             </button>
+            <p className="text-sm leading-6 text-neutral-500">
+              For urgent bookings, please contact us directly by phone or
+              WhatsApp.
+            </p>
           </div>
         </form>
       </div>
