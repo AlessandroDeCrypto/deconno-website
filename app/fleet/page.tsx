@@ -19,12 +19,18 @@ const fleet = [
     image: "/fleet-van.png",
     alt: "Luxury van chauffeur service Zurich airport",
   },
+  {
+    title: "Luxury Sprinter / VIP Van",
+    text: "A premium high-capacity vehicle for executive groups, VIP guests, family travel, and stylish long-distance transfers with exceptional comfort.",
+    image: "/fleet-luxury-sprinter.png",
+    alt: "Luxury Sprinter VIP transport Zurich",
+  },
 ];
 
 export const metadata = {
   title: "Fleet",
   description:
-    "Premium sedans and spacious vans for Zurich Airport transfers, Zurich city rides, and private transportation across Switzerland.",
+    "Premium sedans, luxury vans, and VIP sprinters for Zurich Airport transfers, Zurich city rides, and private transportation across Switzerland.",
 };
 
 export default function FleetPage() {
@@ -33,10 +39,10 @@ export default function FleetPage() {
       <SectionTitle
         eyebrow="Fleet"
         title="Comfortable vehicles for every type of transfer"
-        text="Our fleet is selected to support airport pickups, city transportation, and longer journeys across Switzerland with premium comfort."
+        text="Our fleet is selected to support airport pickups, city transportation, executive travel, and longer journeys across Switzerland with premium comfort."
       />
 
-      <div className="mt-10 grid gap-6 lg:grid-cols-3">
+      <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
         {fleet.map((item) => (
           <div
             key={item.title}
